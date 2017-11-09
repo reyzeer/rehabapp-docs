@@ -2,6 +2,9 @@
 %% Author: Zbigniew Czarnecki 209909             %%
 %% Latex scheme parent fork: tasklife-docs       %%
 %% Latex scheme version: 0.2                     %%
+%% + podzial na kolumny							 %%
+%% + szablon wymagania funkcjonalne              %%
+%% + szablon wymagania poza funkcjonalne         %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[a4paper, 11pt]{article}
@@ -32,6 +35,95 @@
 
 %podział na kolumny
 \usepackage{multicol}
+
+%%% Schematy
+
+%tłusty tekst, do lewej
+\newcolumntype{R}[1]{>{\raggedright\bfseries}p{#1}}
+%do lewej
+\newcolumntype{L}[1]{>{\raggedright}p{#1}}
+
+%% Wymagania funckjonalne
+
+% 
+\def\funcreq#1#2#3#4#5#6#7#8#9{%
+	\def\funcreqcontinued##1{%
+		\vspace{0.2cm}
+		\begin{tabularx}{\textwidth}{|R{4cm}|L{11.1cm}|}
+			\hline
+			Nr wymagania & #1 \tabularnewline \hline
+			Nazwa & #2 \tabularnewline \hline
+			Opis & #3 \tabularnewline \hline
+			Przesłanka & #4 \tabularnewline \hline
+			Ograniczenia i warunki & #5 \tabularnewline \hline
+			Dane wejściowe & #6 \tabularnewline \hline
+			Źródło danych & #7 \tabularnewline \hline
+			Wynik & #8 \tabularnewline \hline
+			Priorytet & #9 \tabularnewline \hline
+			Kryterium do spełnienia & ##1 \tabularnewline \hline
+		\end{tabularx}
+		\vspace{0.2cm}
+	}%
+	\funcreqcontinued%
+}
+
+%Przyklad: \funcreq{Nr wymagania}{Nazwa}{Opis}{Przesłanka}{Ograniczenia i warunki}{Dane wejściowe}{Źródło danych}{Wynik}{Priorytet}{Kryterium do spełnienia}
+
+%\funcreq{
+%		1
+%	}{
+%		Nazwa
+%	}{
+%		Opis
+%	}{
+%		Przesłanka
+%	}{
+%		Ograniczenia i warunki
+%	}{
+%		Dane wejściowe
+%	}{
+%		Źródło danych
+%	}{
+%		Wynik
+%	}{
+%		Priorytet
+%	}{
+%		Kryterium do spełnienia
+%}
+
+%% Wymagania poza funkcjonalne
+
+\def\nonefuncreq#1#2#3#4#5#6#7#8#9{%
+	\def\nonefuncreqcontinued##1{%
+		\vspace{0.2cm}
+		\begin{tabularx}{\textwidth}{|R{4cm}|L{11.1cm}|}
+			\hline
+			Nr wymagania & #1 \tabularnewline \hline
+			Nazwa & #2 \tabularnewline \hline
+			Opis & #3 \tabularnewline \hline
+			Przesłanka & #4 \tabularnewline \hline
+			Kryterium do spełnienia & ##1 \tabularnewline \hline
+		\end{tabularx}
+		\vspace{0.2cm}
+	}%
+	\nonefuncreqcontinued%
+}
+
+\newcommand{\}{def}
+
+%Przyklad: \nonefuncreq{Nr wymagania}{Nazwa}{Opis}{Przesłanka}{Kryterium do spełnienia}
+
+%\nonefuncreq{
+%		1
+%	}{
+%		Nazwa
+%	}{
+%		Opis
+%	}{
+%		Przesłanka
+%	}{
+%		Kryterium do spełnienia
+%}
 
 \begin{document}
 
