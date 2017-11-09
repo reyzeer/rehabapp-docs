@@ -1,0 +1,8 @@
+.directory
+*.out
+*.kate-swp
+*.log
+*.gz
+*.aux
+*.pdf
+*.toc

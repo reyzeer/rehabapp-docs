@@ -1,0 +1,47 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author: Zbigniew Czarnecki 209909             %%
+%% Latex scheme parent fork: tasklife-docs       %%
+%% Latex scheme version: 0.2                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage[margin=2.5cm]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, polish]{babel}
+
+%wciecie pierwszego wiersza
+\usepackage{indentfirst}
+\setlength{\parindent}{1cm}
+
+%ładne linki (nie rzuca się o podkreślenia i procenty)
+\usepackage{hyperref}
+
+%manipulacje kolumną w tabeli (pogrubienie tekstu w całej kolumnie)
+\usepackage{array}
+
+%tabele na do maksymalnej szerokosci strony
+\usepackage{tabularx}
+
+%dodawanie plików graficznych
+\usepackage{graphicx}
+
+%lepsza czcionka do latexa
+\usepackage{times}
+
+%podział na kolumny
+\usepackage{multicol}
+
+\begin{document}
+
+\include{chapters/strona_glowna}
+\tableofcontents
+%\include{chapters/wstep}
+%\include{chapters/projekt}
+%\include{chapters/opis_implementacji}
+%\include{chapters/bibliografia}
+%\include{chapters/inwentaryzacha_sprzetu_i_infrastuktury_dostepnej_w_przedsiborstwie}
+%\include{chapters/analiza_potrzeb_uzytkownika}
+
+\end{document}
