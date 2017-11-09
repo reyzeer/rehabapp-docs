@@ -93,23 +93,18 @@
 
 %% Wymagania poza funkcjonalne
 
-\def\nonefuncreq#1#2#3#4#5#6#7#8#9{%
-	\def\nonefuncreqcontinued##1{%
-		\vspace{0.2cm}
-		\begin{tabularx}{\textwidth}{|R{4cm}|L{11.1cm}|}
-			\hline
-			Nr wymagania & #1 \tabularnewline \hline
-			Nazwa & #2 \tabularnewline \hline
-			Opis & #3 \tabularnewline \hline
-			Przesłanka & #4 \tabularnewline \hline
-			Kryterium do spełnienia & ##1 \tabularnewline \hline
-		\end{tabularx}
-		\vspace{0.2cm}
-	}%
-	\nonefuncreqcontinued%
+\newcommand{\nonefuncreq}[5]{
+	\vspace{0.2cm}
+	\begin{tabularx}{\textwidth}{|R{4cm}|L{11.1cm}|}
+		\hline
+		Nr wymagania & #1 \tabularnewline \hline
+		Nazwa & #2 \tabularnewline \hline
+		Opis & #3 \tabularnewline \hline
+		Przesłanka & #4 \tabularnewline \hline
+		Kryterium do spełnienia & #5 \tabularnewline \hline
+	\end{tabularx}
+	\vspace{0.2cm}
 }
-
-\newcommand{\}{def}
 
 %Przyklad: \nonefuncreq{Nr wymagania}{Nazwa}{Opis}{Przesłanka}{Kryterium do spełnienia}
 
