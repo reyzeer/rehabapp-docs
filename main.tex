@@ -5,6 +5,8 @@
 %% + podzial na kolumny							 %%
 %% + szablon wymagania funkcjonalne              %%
 %% + szablon wymagania poza funkcjonalne         %%
+%% + łamannie lini w tabular					 %%
+%% + ryyko										 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[a4paper, 11pt]{article}
@@ -35,6 +37,9 @@
 
 %podział na kolumny
 \usepackage{multicol}
+
+%w tej komurce można łamać linie "\\"
+\usepackage{makecell}
 
 %%% Schematy
 
@@ -119,6 +124,35 @@
 %	}{
 %		Kryterium do spełnienia
 %}
+
+%% Ryzyka
+
+\newcommand{\risk}[5]{
+	\vspace{0.2cm}
+	\begin{tabularx}{\textwidth}{|R{4cm}|L{11.1cm}|}
+		\hline
+		Zagrożenie & #1 \tabularnewline \hline
+		Skutek & #2 \tabularnewline \hline
+		Prawdopodobieństwo wystąpienia & #3 \tabularnewline \hline
+		Ryzyko & #4 \tabularnewline \hline
+		Profilaktyka & #5 \tabularnewline \hline
+	\end{tabularx}
+	\vspace{0.2cm}
+}
+
+%\risk{
+%	Zagrożenie
+%}{
+%	Skutek
+%}{
+%	Prawdopodobieństwo wystąpienia
+%}{
+%	Ryzyko
+%}{
+%	Profilaktyka
+%}
+
+%Przyklad: \risk{Zagrożenie}{Skutek}{Prawdopodobieństwo wystąpienia}{Ryzyko}{Profilaktyka}
 
 \begin{document}
 
