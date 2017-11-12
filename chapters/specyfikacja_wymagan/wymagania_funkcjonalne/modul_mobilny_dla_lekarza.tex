@@ -99,20 +99,17 @@
 \funcreq{
 	42
 }{
-	Odwołanie wizyty
+	Odwołanie terminu
 }{
 	Lekarz ma możliwość odwołania wizyty.\\
-	W momencie odwołania wizyty pacjent dostaje wiadomość email z informacją.
-	
-	%TODO HERE
-	
+	W momencie odwołania wizyty pacjent dostaje wiadomość email z adekwatną informacją.
 }{
-	Jeśli pacjent nie będzie mógł pojawić się na wizycie powinien móc z niej zrezygnować.
+	Jeśli lekarz nie będzie mógł zrealizować wizyty powinien móc ją odwołać.
 }{
-	Użytkownik jest zalogowany do modułu pacjenta.\\
+	Użytkownik jest zalogowany do aplikacji lekarza.\\
 	Wizyta z przyszłości, nie wcześniej niż za 3h.
 }{
-	Wizyta.
+	Termin
 }{
 	Użytkownik
 }{
@@ -121,4 +118,73 @@
 	Wysoki
 }{
 	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	43
+}{
+	Podsumowanie terminu
+}{
+	Po odbyciu się wizyty na umówiony termin, ma istnieć możliwość jej potwierdzenia, że się odbyła oraz dodania krótkiej opcjonalnej informacji o jej przebiegu.
+}{
+	Musi istnieć miejsce do gromadzenia historii przebiegu zabiegów.
+}{
+	Użytkownik jest zalogowany do aplikacji lekarza.\\
+	Na dany termin jest zapisany pacjent.\\
+	Termin upłynął.
+}{
+	Termin, potwierdzenie/zaprzeczanie odbycia zabiegu i opis (opcjonalne).
+}{
+	Użytkownik
+}{
+	Dodanie informacji podsumowującej miniony umówiony zabieg.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z założeniami i działa poprawnie.
+}
+
+\funcreq{
+	44
+}{
+	Lista pacjentów
+}{
+	Lekarz powinien móc przeglądać listę swoich pacjentów.\\
+	W ramach listy mają funkcjonować filtry wyszukiwania pacjentów po: imieniu, nazwisku lub adresie email.
+}{
+	Musi istnieć miejsce w~którym lekarz będzie mógł przeszukać listę pacjentów.
+}{
+	Użytkownik jest zalogowany do aplikacji lekarza.
+}{
+	Imię pacjenta (opcjonalne), nazwisko (opcjonalne) i email (opcjonalne).
+}{
+	Użytkownik
+}{
+	Wyświetlenie listy pacjentów zgodnej z~ustawieniem filtrów.
+}{
+	Średni
+}{
+	Funkcja została zaimplementowana zgodnie z założeniami i działa poprawnie.
+}
+
+\funcreq{
+	45
+}{
+	Historia pacjenta
+}{
+	Lekarz ma móc przeglądać historię pacjenta.
+}{
+	Musi istnieć miejsce w~którym lekarz będzie mógł podejrzeć historię przyjętych pacjentów.
+}{
+	Użytkownik jest zalogowany do aplikacji lekarza.
+}{
+	Pacjent
+}{
+	Użytkownik
+}{
+	Wyświetlenie listy odbytych terminów pacjenta wraz z~podsumowaniami.
+}{
+	Średni
+}{
+	Funkcja została zaimplementowana zgodnie z założeniami i działa poprawnie.
 }
