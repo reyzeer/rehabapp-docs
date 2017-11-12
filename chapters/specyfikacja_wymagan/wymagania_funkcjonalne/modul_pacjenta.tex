@@ -1,0 +1,263 @@
+\subsubsection{Moduł pacjenta}
+
+\funcreq{
+	26
+}{
+	Rejestracja pacjenta
+}{
+	System ma posiadać funkcjonalność rejestracji dla pacjenta.\\
+	Rejestracja ma zostać potwierdzona po przez otworzenie przez użytkownika linku, który zostanie wysłany na jego skrzynkę mailową po wysłaniu poprawnie wypełnionego formularza rejestracyjnego.
+}{
+	System ma posiadać funkcjonalność rejestracji dla pacjenta. Co umożliwi utworzenie konta do którego zostaną przypisane podstawowe informacje, a także dzięki, któremu użytkownik będzie miał dostęp do umówionych wizyt i~ich historii.
+}{
+	Użytkownik nie jest zalogowany.\\
+	Nie może być dwóch użytkowników z~tym samym adresem email.
+}{
+	Imię, nazwisko, email, numer telefonu, hasło i powtórz hasło.
+}{
+	Użytkownik
+}{
+	Dodanie konta pacjenta do bazy danych.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	27
+}{
+	Logowanie pacjenta
+}{
+	System ma posiadać funkcjonalność logowania dla pacjenta.
+}{
+	Umożliwia dostęp do rejestracji i~prywatnej historii pacjentowi.
+}{
+	Użytkownik nie jest zalogowany do panelu administracyjnego.\\
+	Weryfikacja użytkownika powinna zapewnić poufność i~bezpieczeństwo procesu.
+}{
+	Email oraz hasło
+}{
+	Użytkownik
+}{
+	Potwierdzenie tożsamości użytkownika i~przyznanie dostępu do opcji dostępnych po zalogowaniu w~module dla pacjenta.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	28
+}{
+	Resetowanie hasła do konta pacjenta
+}{
+	System umożliwia zmianę hasła do konta pacjenta. Podanie w~formularz poprawnego adresu email przypisanego do tego konta, ma skutkować wysłaniem na wskazany adres wiadomości z~linkiem. Odnośnik ten ma prowadzić na podstronę ustawienia nowego hasła.
+}{
+	W~razie utraty hasła przez pacjenta, ma umożliwić odzyskanie dostępu do konta.
+}{
+	Użytkownik nie jest zalogowany do panelu administracyjnego.\\
+	Bezpieczeństwo procesu.
+}{
+	Email
+}{
+	Użytkownik
+}{
+	Zmiana hasła do konta pacjenta.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	29
+}{
+	Zmiana hasła
+}{
+	System ma umożliwić zmianę hasła do konta pacjenta.\\
+	Zmiana hasła ma zostać potwierdzona linkiem wysyłanym na adres email przypisany do konta.
+}{
+	Pozwala odebrać dostęp osobą niepowołanym, które weszły w~posiadanie danych do konta.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Bezpieczeństwo procesu.
+}{
+	Aktualne hasło, nowe hasło i~potwierdzenie nowego hasła.
+}{
+	Użytkownik
+}{
+	Zmiana hasła do konta pacjenta.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	30
+}{
+	Zmiana adresu email
+}{
+	System ma umożliwić zmianę adresu email do konta pacjenta.
+}{
+	W razie utraty dostępu lub bezpieczeństwa przypisanego adresu email do konta pozwala na jego zmianę.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Bezpieczeństwo procesu.
+}{
+	Aktualne hasło i~email.
+}{
+	Użytkownik
+}{
+	Zmiana adresu email przypisanego do konta pacjenta.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	31
+}{
+	Wylogowanie z~modułu pacjenta
+}{
+	System ma umożliwić wylogowanie z~modułu pacjenta.
+}{
+	Ma to uniemożliwić dostęp do poufnych danych osobą trzecim, które uzyskały dostęp do komputera z~którego wykonywane są logowania.
+}{
+	Użytkownik jest zalogowany do modułu pacjenta.\\
+	Bezpieczeństwo procesu.
+}{
+	-
+}{
+	Użytkownik
+}{
+	Odebranie dostęp do funkcjonalności po zalogowaniu panelu pacjenta.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	32
+}{
+	Wyszukiwanie
+}{
+	System ma umożliwić wyszukiwanie zabiegów i~lekarzy.\\
+	Wyszukiwanie ma się odbywać przez wprowadzenie frazy pasującej do nazwy zabiegu lub specjalizacji lekarza lub imię i~nazwiska lekarza.\\
+	W~wynikach ma wyświetlić listę lekarzy pasujących do wprowadzonych danych.\\
+	Wybranie danego lekarza ma przenieść do jego publicznego profilu.
+}{
+	Ma to umożliwić znalezienie właściwego lekarza. 
+}{
+	-
+}{
+	Szukana fraza
+}{
+	Użytkownik
+}{
+	Wyświetlenie zgodnych wyników.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	33
+}{
+	Profil lekarza
+}{
+	Wyświetla opis lekarza na podstawie danych wprowadzonych w~panelu administracyjnym.\\
+	Wyświetla kalendarz z~terminami wizyt lekarza.\\
+	Przy terminach wizyt mają pojawiać się nazwy wykonywanych w~tedy zabiegów i~ich ceny.\\
+	Ma pojawiać się informacja czy termin jest przeszły, dostępny lub zajęty.\\
+	Dostępne terminy mają być aktywne do kliknięcia.
+}{
+	Ma to umożliwić sprawdzenie lekarza przez pacjenta i~przeglądnięcie jego terminarza, a także w razie chęci skorzystania z~zabiegu przejście dalej.
+}{
+	Użytkownik jest zalogowany do modułu pacjenta.
+}{
+	Lekarz
+}{
+	Użytkownik
+}{
+	Wyświetlenie opisu lekarza z~~jego kalendarzem.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	34
+}{
+	Umówienie na wizytę
+}{
+	Kliknięcie w~odnośnik w~kalendarzu z~wymagania 31, w przypadku niezalogowanego użytkownika przenosi do strony logowania.\\
+	W~przypadku zalogowanego wyświetla pytanie z potwierdzeniem wizyty.
+}{
+	Ma to umożliwić rejestrację na wizytę.
+}{
+	Użytkownik jest zalogowany do modułu pacjenta.\\
+	Dany termin musi być w~przyszłości, nie wcześniej niż za 3h.\\
+	Dany termin musi być wolny.
+}{
+	Termin
+}{
+	Użytkownik
+}{
+	Zapisanie na termin.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	35
+}{
+	Wizyty
+}{
+	Użytkownik ma możliwość przeglądnięcia historii wizyt oraz wyświetlenia ich opisu.\\
+	W historii mają być dostępne również przyszłe wizyty.
+}{
+	Ma to umożliwić wgląd w historię wizyt.
+}{
+	Użytkownik jest zalogowany do modułu pacjenta.
+}{
+	Szukana fraza
+}{
+	Użytkownik
+}{
+	Wyświetlenie historii wizyt.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	36
+}{
+	Odwołanie wizyty
+}{
+	Użytkownik ma możliwość odwołania wizyty.
+}{
+	Jeśli pacjent nie będzie mógł pojawić się na wizycie powinien móc z niej zrezygnować.
+}{
+	Użytkownik jest zalogowany do modułu pacjenta.\\
+	Wizyta z przyszłości, nie wcześniej niż za 3h.
+}{
+	Wizyta.
+}{
+	Użytkownik
+}{
+	Odwołanie wizyty.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}

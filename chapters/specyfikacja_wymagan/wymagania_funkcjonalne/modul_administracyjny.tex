@@ -1,0 +1,591 @@
+\subsubsection{Moduł administracyjny}
+
+\funcreq{
+	1
+}{
+	Logowanie do panelu administracyjnego
+}{
+	System ma posiadać funkcjonalność logowania do panelu administracyjnego, przy pomocy konta administratora.
+}{
+	Uniemożliwienie dostępu osobą niepowołanym.
+}{
+	Użytkownik nie jest zalogowany do panelu administracyjnego.\\
+	Weryfikacja użytkownika powinna zapewnić poufność i~bezpieczeństwo procesu.
+}{
+	Email oraz hasło
+}{
+	Użytkownik
+}{
+	Potwierdzenie tożsamości użytkownika i~przyznanie dostępu do panelu administracyjnego.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	2
+}{
+	Resetowanie hasła do konta administratora
+}{
+	System umożliwia zmianę hasła do konta administratora. Podanie w~formularz poprawnego adresu email przypisanego do tego konta, ma skutkować wysłaniem na wskazany adres wiadomości z~linkiem. Odnośnik ten ma prowadzić na podstronę ustawienia nowego hasła.
+}{
+	W~razie utraty hasła przez administratora systemu, ma umożliwić odzyskanie dostępu do panelu administracyjnego.
+}{
+	Użytkownik nie jest zalogowany do panelu administracyjnego.\\
+	Bezpieczeństwo procesu.
+}{
+	Email
+}{
+	Użytkownik
+}{
+	Zmiana hasła do konta administratora.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	3
+}{
+	Zmiana hasła
+}{
+	System ma umożliwić zmianę hasła do konta administracyjnego.\\
+	Zmiana hasła ma zostać potwierdzona linkiem wysyłanym na adres email przypisany do konta.
+}{
+	Pozwala odebrać dostęp osobą niepowołanym, które weszły w~posiadanie danych do konta.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Bezpieczeństwo procesu.
+}{
+	Aktualne hasło, nowe hasło i~potwierdzenie nowego hasła.
+}{
+	Użytkownik
+}{
+	Zmiana hasła do konta administratora.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	4
+}{
+	Zmiana adresu email
+}{
+	System ma umożliwić zmianę adresu email do konta administracyjnego.
+}{
+	W razie utraty dostępu lub bezpieczeństwa przypisanego adresu email do konta pozwala na jego zmianę.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Bezpieczeństwo procesu.
+}{
+	Aktualne hasło i~email.
+}{
+	Użytkownik
+}{
+	Zmiana adresu email przypisanego do konta administratora.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	5
+}{
+	Wylogowanie z~panelu administracyjnego
+}{
+	System ma umożliwić wylogowanie z~panelu administracyjnego.
+}{
+	Ma to uniemożliwić dostęp do panelu osobą trzecim, które uzyskały dostęp do komputera z~którego wykonywane są logowania do niego.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Bezpieczeństwo procesu.
+}{
+	-
+}{
+	Użytkownik
+}{
+	Odebranie dostęp do funkcjonalności panelu administracyjnego.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	6
+}{
+	Dodanie sprzętu
+}{
+	System umożliwia dodanie nowego sprzętu rehabilitacyjnego do bazy danych.\\
+}{
+	Aby móc administrować zasobami konieczne jest ich dodanie do bazy danych w~systemie.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Nie może być dwóch sprzętów o~tej samej nazwie.\\
+	Ilość musi być większa od zera.
+}{
+	Nazwa sprzętu i~ilość.
+}{
+	Użytkownik
+}{
+	Dodanie nowego sprzętu do bazy danych.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	7
+}{
+	Lista sprzętu
+}{
+	System umożliwia przeglądanie oraz filtorwanie sprzętu po nazwie, ilości, nazwie zabiegu, imieniu~i nazwisku lekarza.
+}{
+	System musi umożliwiać przeglądanie dostępnego w~bazie danych sprzętu.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.
+}{
+	Nazwa sprzętu (opcjonalne), ilość(opcjonlane), nazwa zabiegu (opcjonalne), imie i~naziwsko lekarza.
+}{
+	Użytkownik
+}{
+	Wyświetlenie listy sprzętów, które spełnia kryteria z~filtrów.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	8
+}{
+	Podgląd sprzętu
+}{
+	System umożliwia podgląd sprzętu.
+}{
+	System musi umożliwiać podgląd nazwy, ilości sprzętu.\\
+	System ma także wyświetlić listę zabiegów wykorzystujących ten sprzęt.\\
+	System ma także wyświetlić listę lekarzy wykorzystujących ten sprzęt.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.
+}{
+	-
+}{
+	Użytkownik
+}{
+	Wyświetlenie opis sprzętów oraz listę powiązanych z~nim zabiegów i~lekarzy.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	9
+}{
+	Edycja sprzętu
+}{
+	System umożliwia edycję informacji o~sprzęcie.
+}{
+	System ma umożliwić zmianę błędnej nazwy lub ilości sprzętu.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Nie może być dwóch sprzętów o~tej samej nazwie.\\
+	Ilość musi być większa od zera.
+}{
+	Nazwa sprzętu i~ilość.
+}{
+	Użytkownik
+}{
+	Zmiana nazwy i~ilości sprzętu.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z założeniami i działa poprawnie.
+}
+
+\funcreq{
+	10
+}{
+	Usuwanie sprzętu
+}{
+	System ma umożliwić usuwanie sprzętu z~bazy danych.\\
+	Usuwanie ma się odbywać po przez nadanie rekordowi w~bazie danych statusu usuniętego, ukrywając jego dostępność w~całym systemie, ale nie usuwając całkowicie informacji o~nim z~bazy danych.\\
+	Podczas próby usunięcia sprzętu do którego jest przypisany co najmniej jeden zabieg musi zostać wyświetlony stosowny komunikat.
+}{
+	W~razie zniszczenia, bądź rezygnacji z~danego sprzętu w~zakładzie musi istnieć możliwość usunięcia.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Do sprzętu nie może być przypisany żaden zabieg.
+}{
+	Sprzęt
+}{
+	Użytkownik
+}{
+	Ukrycie dostępności sprzętu w~całym systemie na zawsze.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z założeniami i działa poprawnie.
+}
+
+\funcreq{
+	11
+}{
+	Dodanie zabiegu
+}{
+	System umożliwia dodanie nowego zabiegu rehabilitacyjnego do bazy danych.\\
+}{
+	Aby móc administrować zasobami konieczne jest ich dodanie do bazy danych w~systemie.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Nie może być dwóch zabiegów o~tej samej nazwie.
+}{
+	Nazwa zabiegu, czas trwania (wybór opcji: 30m, 1h, 1.5h, 2h), cena i~wymagane sprzęty (opcjonalne).
+}{
+	Użytkownik
+}{
+	Dodanie nowego zabiegu do bazy danych.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	12
+}{
+	Lista zabiegów
+}{
+	System umożliwia przeglądanie oraz filtorwanie zabiegów po nazwie, czasie trwania, cenie, nazwie sprzętu, imieniu i~nazwisku lekarza.
+}{
+	System musi umożliwiać przeglądanie dostępnych w~bazie danych zabiegów.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.
+}{
+	Nazwa zabiegu (opcjonalne), czas trwania (wybór opcji: 30m, 1h, 1.5h, 2h), cena (opcjonalne), nazwa sprzętu (opcjonlane), imie i~naziwsko lekarza.
+}{
+	Użytkownik
+}{
+	Wyświetlenie listy zabiegów, które spełnia kryteria z~filtrów.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	13
+}{
+	Podgląd zabiegu
+}{
+	System umożliwia podgląd zabiegu.
+}{
+	System musi umożliwiać podgląd nazwy i ceny.\\
+	System ma także wyświetlić listę sprzętów wykorzystywanych do tego zabiegu.\\
+	System ma także wyświetlić listę lekarzy wykonujących ten zabieg.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.
+}{
+	-
+}{
+	Użytkownik
+}{
+	Wyświetlenie opis zabiegu oraz listę powiązanych z~nim sprzętów i~lekarzy.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	14
+}{
+	Edycja zabiegu
+}{
+	System umożliwia edycję informacji o~zabiegu.
+}{
+	System ma umożliwić zmianę błędnej nazwy, czasu trwania, ceny lub powiązanego sprzętu.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Nie może być dwóch zabiegów o~tej samej nazwie.
+}{
+	Nazwa zabiegu, czas trwania (wybór opcji: 30m, 1h, 1.5h, 2h), cena i~wymagane sprzęty (opcjonalne).
+}{
+	Użytkownik
+}{
+	Zmiana nazwy lub przypisanego sprzętu do zabiegu w~bazy danych.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	15
+}{
+	Usuwanie zabiegu
+}{
+	System ma umożliwić usuwanie zabiegu z~bazy danych.\\
+	Usuwanie ma się odbywać po przez nadanie rekordowi w~bazie danych statusu usuniętego, ukrywając jego dostępność w~całym systemie, ale nie usuwając całkowicie informacji o~nim z~bazy danych.\\
+	Podczas próby usunięcia zabiegu do którego jest przypisany co najmniej jeden lekarz musi zostać wyświetlony stosowny komunikat.
+}{
+	W~razie rezygnacji z~wykonywanie danego zabiegu w~zakładzie musi istnieć możliwość usunięcia go z~systemu.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Do zabiegu nie może być przypisany żaden lekarz.
+}{
+	Zabieg
+}{
+	Użytkownik
+}{
+	Ukrycie dostępności zabiegu w~całym systemie na zawsze.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z założeniami i działa poprawnie.
+}
+
+\funcreq{
+	16
+}{
+	Dodanie lekarza
+}{
+	System umożliwia dodanie nowego lekarza do bazy danych.\\
+	Po dodaniu lekarza do bazy danych, na wpisany w~formularzu adres email wysyłany jest link, który pozwoli na ustawinie hasła do konta.
+}{
+	Aby móc administrować zasobami konieczne jest ich dodanie do bazy danych w~systemie.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Nie może być dwóch lekarzy z~tym samym adresem email.
+}{
+	Imię lekarza, nazwisko, email, specjalizacja lekarza, opis, zdjęcie (opcjonlane), lista wykonywanych zabiegów (conajmniej jeden).
+}{
+	Użytkownik
+}{
+	Dodanie nowego zabiegu do bazy danych.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	17
+}{
+	Lista lekarzy
+}{
+	System umożliwia przeglądanie oraz filtorwanie lekarzy po imieniu, nazwisku i wykonywanych zabiegach.
+}{
+	System musi umożliwiać przeglądanie dostępnych w~bazie danych lekarzy.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.
+}{
+	Imię (opcjonalne), nazwisko (opcjonalne), email (opcjonalne), nazwa zabiegu(opcjonalne) i sprzęt(opcjonalne).
+}{
+	Użytkownik
+}{
+	Wyświetlenie listy lekarzy, którzy spełniają kryteria z~filtrów.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	18
+}{
+	Podgląd lekarza
+}{
+	System umożliwia podgląd lekarza.
+}{
+	System musi umożliwiać podgląd lekarza.\\
+	System ma także wyświetlić listę sprzętów wykorzystywanych przez lekarza.\\
+	System ma także wyświetlić listę zabiegów wykonywanych przez lekarza.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.
+}{
+	-
+}{
+	Użytkownik
+}{
+	Wyświetlenie opis lekarza oraz listy powiązanych z~nim sprzętów i~zabiegów.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	19
+}{
+	Edycja lekarza
+}{
+	System umożliwia edycję informacji o~lekarzu.
+}{
+	System ma umożliwić zmianę błędnych danych lub powiązanych zabiegów.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Nie może być dwóch lekarzy z~tym samym adresem email.
+}{
+	Imię lekarza, nazwisko, email, specjalizacja lekarza, opis, zdjęcie (opcjonlane), lista wykonywanych zabiegów (conajmniej jeden).
+}{
+	Użytkownik
+}{
+	Zmiana danych lekarza w~bazy danych.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	20
+}{
+	Usuwanie lekarza
+}{
+	System ma umożliwić usuwanie lekarza z~bazy danych.\\
+	Usuwanie ma się odbywać po przez nadanie rekordowi w~bazie danych statusu usuniętego, ukrywając jego dostępność w~całym systemie, ale nie usuwając całkowicie informacji o~nim z~bazy danych.\\
+	Podczas próby usunięcia lekarza do którego jest umówiona co najmniej jedna wizyta musi zostać wyświetlony stosowny komunikat.
+}{
+	W~razie zakończenia pracy lekarza w~zakładzie musi istnieć możliwość usunięcia go z~listy dostępnych lekarzy.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Lekarz nie ma umówionych wizyt.
+}{
+	Lekarz
+}{
+	Użytkownik
+}{
+	Ukrycie dostępności lekarza w~całym systemie na zawsze.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z założeniami i działa poprawnie.
+}
+
+\funcreq{
+	21
+}{
+	Dodanie terminów wizyt lekarzowi
+}{
+	System ma umożliwić dodanie terminów wizyt lekarzowi.\\
+}{
+	Dodanie terminów przyjęć na zabiegi będzie źródłem danych o~godzinach zabiegów dla pacjentów oraz czasie zajętości sprzętu.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Lekarz nie ma w tym czasie innych terminów zabiegów.\\
+	Sprzęt potrzebny do wykonania zabiegów jest dostępny.
+}{
+	Lekarz, zabieg, dni tygodnia i przedział godzin w~ciągu dnia w~których odbywa się zabieg u tego lekarza i przedział dat dla których mają zostać dodane terminy zabiegów.
+}{
+	Użytkownik
+}{
+	Dodanie terminów zabiegów do bazy danych.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z założeniami i działa poprawnie.
+}
+
+\funcreq{
+	22
+}{
+	Wyświetlanie kalendarza
+}{
+	System ma umożliwić wyświetlenie kalendarza wizyt dla danego lekarza.
+}{
+	Musi istnieć podgląd kalendarza wizyt, aby mieć wgląd w grafik pracy lekarza.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.
+}{
+	Lekarz
+}{
+	Użytkownik
+}{
+	Wyświetlenie kalendarza lekarza.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z założeniami i działa poprawnie.
+}
+
+\funcreq{
+	23
+}{
+	Usunięcie terminu
+}{
+	System ma umożliwić usunięcie dostępności terminu.\\
+	W razie gdy na dany termin jest umówiony pacjent ma pojawić się stosowny komunikat.
+}{
+	Potrzebne jest narzędzie, które pozwoli odowałać terminy zabiegów.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Na dany termin nie może być umówiony pacjent.\\
+	Termin jeszcze nie upłynął.
+}{
+	Termin
+}{
+	Użytkownik
+}{
+	Usunięcie terminu z kalendarza.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z założeniami i działa poprawnie.
+}
+
+\funcreq{
+	24
+}{
+	Odwołanie terminu
+}{
+	System ma umożliwić odwołanie wizyty.\\
+	Pacjent ma zostać powiadomiony o~odwołaniu jego wizyty mailem.
+}{
+	Musi istnieć narzędzie pozwalające na odwołanie wizyt w~razie braku możliwości ich realizacji.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Na dany termin jest zapisany pacjent.\\
+	Termin jeszcze nie upłynął.
+}{
+	Termin
+}{
+	Użytkownik
+}{
+	Odwołanie umówionego zabiegu.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z założeniami i działa poprawnie.
+}
+
+\funcreq{
+	25
+}{
+	Podsumowanie terminu
+}{
+	Po odbyciu się wizyty na umówiony termin, ma istnieć możliwość jej potwierdzenia, że się odbyła oraz dodania krótkiej opcjonalnej informacji o jej przebiegu.
+}{
+	Musi istnieć miejsce do gromadzenia historii przebiegu zabiegów.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Na dany termin jest zapisany pacjent.\\
+	Termin upłynął.
+}{
+	Termin, potwierdzenie/zaprzecznie odbycia zabiegu i opis (opcjonalne).
+}{
+	Użytkownik
+}{
+	Dodanie informacji podsumowującej miony umówiony zabieg.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z założeniami i działa poprawnie.
+}
