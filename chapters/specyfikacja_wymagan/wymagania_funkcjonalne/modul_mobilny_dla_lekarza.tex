@@ -1,0 +1,124 @@
+\subsubsection{Moduł mobilny dla lekarza}
+
+\funcreq{
+	38
+}{
+	Logowanie lekarza
+}{
+	System ma posiadać funkcjonalność logowania dla lekarza.
+}{
+	Umożliwia dostęp do kalendarza lekarza i~wprowadzania w~nim zmian.
+}{
+	Użytkownik nie jest zalogowany do aplikacji lekarza.\\
+	Weryfikacja użytkownika powinna zapewnić poufność i~bezpieczeństwo procesu.
+}{
+	Email oraz hasło
+}{
+	Użytkownik
+}{
+	Potwierdzenie tożsamości użytkownika i~przyznanie dostępu do opcji dostępnych po zalogowaniu w~aplikacji dla lekarza.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	39
+}{
+	Wylogowanie z~aplikacji lekarza
+}{
+	System ma umożliwić wylogowanie z~aplikacji lekarza.
+}{
+	Ma to uniemożliwić dostęp do poufnych danych osobą trzecim, które uzyskały dostęp do komputera z~którego wykonywane są logowania.
+}{
+	Użytkownik jest zalogowany do aplikacji lekarza.\\
+	Bezpieczeństwo procesu.
+}{
+	-
+}{
+	Użytkownik
+}{
+	Odebranie dostęp do funkcjonalności po zalogowaniu do aplikacji lekarza.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	40
+}{
+	Wyświetlenie kalendarza
+}{
+
+	Wyświetla kalendarz z~terminami wizyt lekarza.\\
+	Przy terminach wizyt mają pojawiać się nazwy wykonywanych w~tedy zabiegów.\\
+	Ma pojawiać się informacja czy termin jest przeszły, dostępny lub zajęty.\\
+	Dostępne i aktywne terminy mają być aktywne do kliknięcia.
+}{
+	Ma to umożliwić sprawdzenie lekarzowi swojego planu zajęć.
+}{
+	Użytkownik jest zalogowany do aplikacji lekarza.
+}{
+	-
+}{
+	Użytkownik
+}{
+	Wyświetlenie kalendarza.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	41
+}{
+	Dodanie terminów wizyt przez lekarza
+}{
+	System ma umożliwić dodanie terminów wizyt przez apliakcję lekarzowi.\\
+}{
+	Dodanie terminów przyjęć na zabiegi będzie źródłem danych o~godzinach zabiegów dla pacjentów oraz czasie zajętości sprzętu.
+}{
+	Użytkownik jest zalogowany do aplikacji lekarza.\\
+	Lekarz nie ma w tym czasie innych terminów zabiegów.\\
+	Sprzęt potrzebny do wykonania zabiegów jest dostępny.
+}{
+	Zabieg, dni tygodnia i przedział godzin w~ciągu dnia w~których odbywa się zabieg u tego lekarza i przedział dat dla których mają zostać dodane terminy zabiegów.
+}{
+	Użytkownik
+}{
+	Dodanie terminów zabiegów do bazy danych.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z założeniami i działa poprawnie.
+}
+
+\funcreq{
+	42
+}{
+	Odwołanie wizyty
+}{
+	Lekarz ma możliwość odwołania wizyty.\\
+	W momencie odwołania wizyty pacjent dostaje wiadomość email z informacją.
+	
+	%TODO HERE
+	
+}{
+	Jeśli pacjent nie będzie mógł pojawić się na wizycie powinien móc z niej zrezygnować.
+}{
+	Użytkownik jest zalogowany do modułu pacjenta.\\
+	Wizyta z przyszłości, nie wcześniej niż za 3h.
+}{
+	Wizyta.
+}{
+	Użytkownik
+}{
+	Odwołanie wizyty.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
