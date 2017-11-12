@@ -249,7 +249,7 @@
 	Użytkownik jest zalogowany do panelu administracyjnego.\\
 	Nie może być dwóch zabiegów o~tej samej nazwie.
 }{
-	Nazwa zabiegu i~wymagane sprzęty (opcjonalne).
+	Nazwa zabiegu, cena i~wymagane sprzęty (opcjonalne).
 }{
 	Użytkownik
 }{
@@ -265,13 +265,13 @@
 }{
 	Lista zabiegów
 }{
-	System umożliwia przeglądanie oraz filtorwanie zabiegów po nazwie, nazwie sprzętu, imieniu i~nazwisku lekarza.
+	System umożliwia przeglądanie oraz filtorwanie zabiegów po nazwie, cenie, nazwie sprzętu, imieniu i~nazwisku lekarza.
 }{
 	System musi umożliwiać przeglądanie dostępnych w~bazie danych zabiegów.
 }{
 	Użytkownik jest zalogowany do panelu administracyjnego.
 }{
-	Nazwa zabiegu (opcjonalne), nazwa sprzętu (opcjonlane), imie i~naziwsko lekarza.
+	Nazwa zabiegu (opcjonalne), cena (opcjonalne), nazwa sprzętu (opcjonlane), imie i~naziwsko lekarza.
 }{
 	Użytkownik
 }{
@@ -289,7 +289,7 @@
 }{
 	System umożliwia podgląd zabiegu.
 }{
-	System musi umożliwiać podgląd nazwy.\\
+	System musi umożliwiać podgląd nazwy i ceny.\\
 	System ma także wyświetlić listę sprzętów wykorzystywanych do tego zabiegu.\\
 	System ma także wyświetlić listę lekarzy wykonujących ten zabieg.
 }{
@@ -313,12 +313,12 @@
 }{
 	System umożliwia edycję informacji o~zabiegu.
 }{
-	System ma umożliwić zmianę błędnej nazwy lub powiązanego sprzętu.
+	System ma umożliwić zmianę błędnej nazwy, ceny lub powiązanego sprzętu.
 }{
 	Użytkownik jest zalogowany do panelu administracyjnego.\\
 	Nie może być dwóch zabiegów o~tej samej nazwie.
 }{
-	Nazwa zabiegu i~wymagane sprzęty (opcjonalne).
+	Nazwa zabiegu, cena i~wymagane sprzęty (opcjonalne).
 }{
 	Użytkownik
 }{
@@ -348,6 +348,149 @@
 	Użytkownik
 }{
 	Ukrycie dostępności zabiegu w~całym systemie na zawsze.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z założeniami i działa poprawnie.
+}
+
+\funcreq{
+	16
+}{
+	Dodanie lekarza
+}{
+	System umożliwia dodanie nowego lekarza do bazy danych.\\
+	Po dodaniu lekarza do bazy danych, na wpisany w~formularzu adres email wysyłany jest link, który pozwoli na ustawinie hasła do konta.
+}{
+	Aby móc administrować zasobami konieczne jest ich dodanie do bazy danych w~systemie.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Nie może być dwóch lekarzy z~tym samym adresem email.
+}{
+	Imię lekarza, nazwisko, email, specjalizacja lekarza, opis, zdjęcie (opcjonlane), lista wykonywanych zabiegów (conajmniej jeden).
+}{
+	Użytkownik
+}{
+	Dodanie nowego zabiegu do bazy danych.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	17
+}{
+	Lista lekarzy
+}{
+	System umożliwia przeglądanie oraz filtorwanie lekarzy po imieniu, nazwisku i wykonywanych zabiegach.
+}{
+	System musi umożliwiać przeglądanie dostępnych w~bazie danych lekarzy.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.
+}{
+	Imię (opcjonalne), nazwisko (opcjonalne), email (opcjonalne), nazwa zabiegu(opcjonalne) i sprzęt(opcjonalne).
+}{
+	Użytkownik
+}{
+	Wyświetlenie listy lekarzy, którzy spełniają kryteria z~filtrów.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	18
+}{
+	Podgląd lekarza
+}{
+	System umożliwia podgląd lekarza.
+}{
+	System musi umożliwiać podgląd lekarza.\\
+	System ma także wyświetlić listę sprzętów wykorzystywanych przez lekarza.\\
+	System ma także wyświetlić listę zabiegów wykonywanych przez lekarza.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.
+}{
+	-
+}{
+	Użytkownik
+}{
+	Wyświetlenie opis lekarza oraz listy powiązanych z~nim sprzętów i~zabiegów.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	19
+}{
+	Edycja lekarza
+}{
+	System umożliwia edycję informacji o~lekarzu.
+}{
+	System ma umożliwić zmianę błędnych danych lub powiązanych zabiegów.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Nie może być dwóch lekarzy z~tym samym adresem email.
+}{
+	Imię lekarza, nazwisko, email, specjalizacja lekarza, opis, zdjęcie (opcjonlane), lista wykonywanych zabiegów (conajmniej jeden).
+}{
+	Użytkownik
+}{
+	Zmiana danych lekarza w~bazy danych.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z~założeniami i~działa poprawnie.
+}
+
+\funcreq{
+	20
+}{
+	Usuwanie lekarza
+}{
+	System ma umożliwić usuwanie lekarza z~bazy danych.\\
+	Usuwanie ma się odbywać po przez nadanie rekordowi w~bazie danych statusu usuniętego, ukrywając jego dostępność w~całym systemie, ale nie usuwając całkowicie informacji o~nim z~bazy danych.\\
+	Podczas próby usunięcia lekarza do którego jest umówiona co najmniej jedna wizyta musi zostać wyświetlony stosowny komunikat.
+}{
+	W~razie zakończenia pracy lekarza w~zakładzie musi istnieć możliwość usunięcia go z~listy dostępnych lekarzy.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Lekarz nie ma umówionych wizyt.
+}{
+	Lekarz
+}{
+	Użytkownik
+}{
+	Ukrycie dostępności lekarza w~całym systemie na zawsze.
+}{
+	Wysoki
+}{
+	Funkcja została zaimplementowana zgodnie z założeniami i działa poprawnie.
+}
+
+\funcreq{
+	21
+}{
+	Wyświetlnie kalendarza
+}{
+	System ma umożliwić usuwanie lekarza z~bazy danych.\\
+	Usuwanie ma się odbywać po przez nadanie rekordowi w~bazie danych statusu usuniętego, ukrywając jego dostępność w~całym systemie, ale nie usuwając całkowicie informacji o~nim z~bazy danych.\\
+	Podczas próby usunięcia lekarza do którego jest umówiona co najmniej jedna wizyta musi zostać wyświetlony stosowny komunikat.
+}{
+	W~razie zakończenia pracy lekarza w~zakładzie musi istnieć możliwość usunięcia go z~listy dostępnych lekarzy.
+}{
+	Użytkownik jest zalogowany do panelu administracyjnego.\\
+	Lekarz nie ma umówionych wizyt.
+}{
+	Lekarz
+}{
+	Użytkownik
+}{
+	Ukrycie dostępności lekarza w~całym systemie na zawsze.
 }{
 	Wysoki
 }{
